@@ -1,0 +1,3 @@
+[submodule "libipsw"]
+	path = libipsw
+	url = git@github.com:0cyn/ipsw.git
