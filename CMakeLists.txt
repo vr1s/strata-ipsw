@@ -11,6 +11,7 @@ execute_process(COMMAND touch ${CMAKE_CURRENT_BINARY_DIR}/libipsw.dylib)
 add_custom_target(
         build_libipsw
         COMMAND ${CMAKE_COMMAND} -E echo "Building 'libipsw'..."
+        COMMAND make -C ${CMAKE_SOURCE_DIR}/libipsw setup
         COMMAND make -C ${CMAKE_SOURCE_DIR}/libipsw build-c
         COMMENT "Building 'libipsw' library..."
         COMMAND cp ${CMAKE_SOURCE_DIR}/libipsw/ipsw.dylib ${CMAKE_CURRENT_BINARY_DIR}/ipsw.dylib
